@@ -1,5 +1,6 @@
 # tanonileandro.github.io
 App Cine - LabComII - Tanoni Leandro
+<br>
 -> Stage 1
 <p align="left">
   <a href="https://skillicons.dev">
