@@ -8,15 +8,17 @@
   <!-- Estilos CSS -->
   <link rel="preload" href="css/common.css" />
   <link rel="stylesheet" href="css/common.css" />
+  <link rel="stylesheet" href="css/pages/index.css">
 </head>
 
 <body>
-  <header>
+  <header class="contenidoHeader">
     <h1>
       <!--Titulo Cabecera-->
+      <img src="img/IconoCine.png" alt="Icono Cine"> 
       <span>Cartelera de Cine</span>
     </h1>
-    <nav>
+    <nav id="nav-bar">
       <!--Menu Superior-->
       <ul>
         <li class="current-page"><a href="#">Cartelera</a></li>
@@ -26,14 +28,18 @@
     </nav>
   </header>
   <!-- Contenido principal de la página -->
-  <main>
+  <main class="contenidoPrincipal">
     <h2>Últimas Películas en Cartelera</h2>
     <section id="form-movie-new">
       <!--Seccion para agregar una palicula favorita por codigo-->
-      <form>
-        <label for="movie-title">Título de la película:</label>
-        <input type="text" id="movie-title" name="movie-title">
-        <button type="submit">Agregar</button>
+      <form class="form-favoritos">
+        <div>
+          <label for="movie-title">Agregar Pélicula Favorita por Código:</label>
+        </div>
+        <div>
+          <input type="text" id="movie-title" name="movie-title">
+          <button type="submit">Agregar</button>
+        </div>
       </form>
     </section>
     <section id="sec-messages">
@@ -45,6 +51,51 @@
     </section>
     <section id="sec_peliculas">
       <!--Seccion visualizacion de peliculas-->
+      <div class="contenedorPeliculas" id="contenedorPeliculas">
+        <img src="https://www.ecartelera.com/carteles/13500/13593/008_p.jpg" alt="Imagen de película">
+        <h3>Creed III</h3>
+        <p>
+          <strong>Código:</strong> 502356 <br><br>
+          <strong>Título original:</strong> Creed III <br>
+          <strong>Idioma original:</strong> en <br>
+          <strong>Resumen:</strong> Después de dominar el mundo del boxeo, Adonis Creed ha progresado tanto en su
+          carrera como en su vida familiar. Cuando Damian (Jonathan Majors), un amigo de la infancia y antiguo prodigio
+          del boxeo, reaparece después de cumplir una larga condena en prisión, Adonis Creed quiere demostrar que merece
+          una oportunidad en el ring. El enfrentamiento entre estos antiguos amigos es algo más que una simple pelea.
+          Para ajustar cuentas, Adonis debe arriesgar su futuro para enfrentarse a Damian, un boxeador que no tiene nada
+          que perder.
+        </p>
+      </div>
+      <div class="contenedorPeliculas" id="contenedorPeliculas">
+        <img src="https://image.tmdb.org/t/p/w500//fcFMd3HdyX7r5gtFwVnn2qr5Yhq.jpg" alt="Imagen de película">
+        <h3>Creed III</h3>
+        <p>
+          <strong>Código:</strong> 677179 <br><br>
+          <strong>Título original:</strong> Creed III <br>
+          <strong>Idioma original:</strong> en <br>
+          <strong>Resumen:</strong> Después de dominar el mundo del boxeo, Adonis Creed ha progresado tanto en su
+          carrera como en su vida familiar. Cuando Damian (Jonathan Majors), un amigo de la infancia y antiguo prodigio
+          del boxeo, reaparece después de cumplir una larga condena en prisión, Adonis Creed quiere demostrar que merece
+          una oportunidad en el ring. El enfrentamiento entre estos antiguos amigos es algo más que una simple pelea.
+          Para ajustar cuentas, Adonis debe arriesgar su futuro para enfrentarse a Damian, un boxeador que no tiene nada
+          que perder.
+        </p>
+      </div>
+      <div class="contenedorPeliculas" id="contenedorPeliculas">
+        <img src="https://image.tmdb.org/t/p/w500//fcFMd3HdyX7r5gtFwVnn2qr5Yhq.jpg" alt="Imagen de película">
+        <h3>Creed III</h3>
+        <p>
+          <strong>Código:</strong> 677179 <br><br>
+          <strong>Título original:</strong> Creed III <br>
+          <strong>Idioma original:</strong> en <br>
+          <strong>Resumen:</strong> Después de dominar el mundo del boxeo, Adonis Creed ha progresado tanto en su
+          carrera como en su vida familiar. Cuando Damian (Jonathan Majors), un amigo de la infancia y antiguo prodigio
+          del boxeo, reaparece después de cumplir una larga condena en prisión, Adonis Creed quiere demostrar que merece
+          una oportunidad en el ring. El enfrentamiento entre estos antiguos amigos es algo más que una simple pelea.
+          Para ajustar cuentas, Adonis debe arriesgar su futuro para enfrentarse a Damian, un boxeador que no tiene nada
+          que perder.
+        </p>
+      </div>
       <div class="contenedorPeliculas" id="contenedorPeliculas">
         <img src="https://image.tmdb.org/t/p/w500//fcFMd3HdyX7r5gtFwVnn2qr5Yhq.jpg" alt="Imagen de película">
         <h3>Creed III</h3>

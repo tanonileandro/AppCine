@@ -1,0 +1,53 @@
+:root {
+    /* Declaro variables CSS con colores principales */
+    --color-theme: #ffce30;
+    --color-active: #288ba8;
+    --color-back-active: #746ab0;
+    --color-back-inactive: #c4c6c9;
+    --color-titulos: #e83845;
+    --color-texto-blanco: #fff;
+    --color-verde: #28a745;
+    --color-gradient: linear-gradient(to right,
+            var(--color-theme),
+            var(--color-back-active));
+}
+
+body {
+    background-color: #e0e0e0;
+}
+/* Formulario agregar peliculas */
+.form-favoritos {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+.form-favoritos div {
+    padding: 10px;
+ }
+/* Seccion Peliculas*/
+#sec_peliculas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 35px;
+    width: 100%;
+    max-width: 1000%;
+    padding: 30px 55px;
+}
+
+#sec_peliculas .contenedorPeliculas img {
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 15px;
+}
+
+#sec_peliculas .contenedorPeliculas h3{
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+}
+
+#sec_peliculas .contenedorPeliculas p {
+    font-size: 12px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: var(--color-active);
+}

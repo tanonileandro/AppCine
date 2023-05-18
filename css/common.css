@@ -2,8 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", "Geneva", Verdana, sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 :root {
   /* Declaro variables CSS con colores principales */
@@ -34,23 +33,24 @@ a {
   user-select: none;
   -webkit-user-select: none;
 }
-header {
+.contenidoHeader {
   position: fixed;
   top: 0;
   width: 100%;
   background-image: url("../img/FondoCine6.webp");
+  background-repeat: no-repeat;
   border-radius: 0 0% 20px 20px;
   border-bottom: 2px solid var(--color-active);
 }
-nav > ul {
+#nav-bar > ul {
   display: flex;
   justify-content: space-between;
   justify-content: center;
 }
-nav li {
+#nav-bar li {
   flex: 0 0 auto;
 }
-nav li a {
+#nav-bar li a {
   display: block;
   padding: 16px 12px;
   text-align: center;
@@ -59,13 +59,16 @@ nav li a {
   font-weight: bold;
   color: var(--color-texto-blanco);
   background-color: var(--color-back-inactive);
+  margin: 0 1px;
+  border-top-right-radius: 10px ;
+  border-top-left-radius: 10px ;
 }
-nav li.current-page a {
+#nav-bar li.current-page a {
   color: var(--color-theme);
   background-color: var(--color-active);
   pointer-events: none;
 }
-main {
+.contenidoPrincipal {
   margin-top: 120px;
   overflow: auto;
   padding: 16px;
@@ -77,6 +80,7 @@ h1 {
   text-align: center;
   margin: 0;
   color: var(--color-theme);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 h1 > img {
   width: 70px;
@@ -87,12 +91,13 @@ h2 {
   color: var(--color-titulos);
   margin: 16px 0;
   text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 h3 {
   color: var(--color-theme);
   margin: 8px 0;
 }
-main section {
+.contenidoPrincipal section {
   display: flex;
   justify-content: space-around;
 }
@@ -109,7 +114,7 @@ footer p {
   font-size: small;
   color: var(--color-theme);
 }
-main p {
+.contenidoPrincipal p {
   margin-bottom: 16px;
 }
 /* Media Query: Estilos a aplicar sólo en pantallas mayores a 400px */
