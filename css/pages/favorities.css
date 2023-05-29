@@ -1,50 +1,80 @@
 :root {
-    /* Declaro variables CSS con colores principales */
-    --color-theme: #ffce30;
-    --color-active: #288ba8;
-    --color-back-active: #746ab0;
-    --color-back-inactive: #c4c6c9;
-    --color-titulos: #e83845;
-    --color-texto-blanco: #fff;
-    --color-verde: #28a79c;
-    --color-font: #1d1d1d;
-    --color-button: #7f8c8d;
-    --color-gradient: linear-gradient(
-      to right,
+  /* Declaro variables CSS con colores principales */
+  --color-theme: #ffce30;
+  --color-active: #288ba8;
+  --color-back-active: #746ab0;
+  --color-back-inactive: #c4c6c9;
+  --color-titulos: #e83845;
+  --color-texto-blanco: #fff;
+  --color-verde: #28a79c;
+  --color-font: #1d1d1d;
+  --color-button: #7f8c8d;
+  --color-gradient: linear-gradient(to right,
       var(--color-theme),
-      var(--color-back-active)
-    );
-  }
+      var(--color-back-active));
+}
+
 /* Seccion Peliculas*/
 #sec-favorities-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 50px;
-    width: 100%;
-    max-width: 1000px;
-    margin: 20px auto;
-    
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 20px auto;
 }
+
 #sec-favorities-list .contenedorPeliculasFavoritas {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-  
+
 #sec-favorities-list .contenedorPeliculasFavoritas img {
-    width: 60%;
-    margin-bottom: 10px;
-    border-radius: 15px;
+  width: 60%;
+  margin-bottom: 10px;
+  border-radius: 15px;
 }
-  
+
 #sec-favorities-list .contenedorPeliculasFavoritas h3 {
-    font-size: 16px;
-    font-weight: 600;
-    text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
 }
-  
+
 #sec-favorities-list .contenedorPeliculasFavoritas p {
-    font-size: 12px;
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-    color: var(--color-verde);
+  font-size: 12px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: var(--color-verde);
+}
+
+/*Estilos GeneralesBotones Favoritos*/
+.button {
+  cursor: pointer;
+  background-color: var(--color-button);
+  color: var(--color-texto-blanco);
+  font-weight: 600;
+  font-size: 10px;
+  margin: 10px auto;
+  padding: 10px 0;
+  text-align: center;
+  width: 200px;
+  text-decoration: none;
+  box-shadow: 0px 3px 0px #373c3c;
+}
+
+.button span {
+  margin-right: 10px;
+}
+
+.button.medium {
+  width: 200px;
+}
+
+.button.radius {
+  border-radius: 50px;
+}
+
+.button:hover {
+  box-shadow: 0px 0px 0px;
 }
