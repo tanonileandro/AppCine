@@ -21,13 +21,11 @@ document.getElementById('form-cine_contacto').addEventListener('submit', functio
   };
 
   emailjs.send('service_g1fd4ra', 'template_r157wdr', templateParams)
-    .then(function(response) {
-      console.log('Email enviado correctamente', response.status, response.text);
-      mostrarMensaje('msuccess-message', 'El formulario se ha enviado correctamente.', 'exito');
-    }, function(error) {
-      console.error('Error al enviar el email', error);
-      mostrarMensaje('error-message', 'Ha ocurrido un error al enviar el formulario. Por favor, intenta nuevamente.', 'error');
-    });
+  .then(function(response) {
+    mostrarMensaje('msuccess-message'); // Llamada a mostrarMensaje sin texto adicional
+  }, function(error) {
+    mostrarMensaje('error-message'); // Llamada a mostrarMensaje sin texto adicional
+  });
 
   // Limpia los campos del formulario
   document.getElementById('nombre').value = '';
