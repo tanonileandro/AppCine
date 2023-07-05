@@ -1,19 +1,24 @@
 // Configuración de EmailJS
-(function() {
+(function () {
   emailjs.init('LYZl281jsaB6EaTu9w4Va'); // Reemplaza 'YOUR_USER_ID' por tu ID de usuario de EmailJS
 })();
 
 // Capturar el evento de envío del formulario
-document.getElementById('form-cine_contacto').addEventListener('submit', function(event) {
+document.querySelector('.form').addEventListener('submit', function (event) {
   event.preventDefault(); // Evita el comportamiento de envío predeterminado del formulario
 
   // Obtener los datos del formulario
-  var nombre = document.getElementById('nombre').value;
-  var email = document.getElementById('email').value;
-  var mensaje = document.getElementById('mensaje').value;
+  const nombre = document.getElementById('nombre').value;
+  const email = document.getElementById('email').value;
+  const mensaje = document.getElementById('mensaje').value;
 
+  // Validar que los campos estén rellenados
+  if (nombre.trim() === '' || email.trim() === '' || mensaje.trim() === '') {
+    mostrarMensaje('warning-message')
+    return; // Detener la ejecución si hay campos vacíos
+  }
   // Envío del email mediante EmailJS
-  var templateParams = {
+  const templateParams = {
     from_name: nombre,
     to_name: 'Tanoni Leandro', //  nombre del destinatario del email
     message: mensaje,
@@ -21,11 +26,11 @@ document.getElementById('form-cine_contacto').addEventListener('submit', functio
   };
 
   emailjs.send('service_g1fd4ra', 'template_r157wdr', templateParams)
-  .then(function(response) {
-    mostrarMensaje('msuccess-message'); // Llamada a mostrarMensaje sin texto adicional
-  }, function(error) {
-    mostrarMensaje('error-message'); // Llamada a mostrarMensaje sin texto adicional
-  });
+    .then(function (response) {
+      mostrarMensaje('msuccess-message', response); // Llamada a mostrarMensaje
+    }, function (error) {
+      mostrarMensaje('error-message', error); // Llamada a mostrarMensaje 
+    });
 
   // Limpia los campos del formulario
   document.getElementById('nombre').value = '';
