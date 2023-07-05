@@ -69,6 +69,16 @@
     <section id="sec-cine-result"></section>
     <!-- Sección donde se debe mostrar los mensajes de error -->
     </section>
+    <section id="sec-cine-result">
+          <!-- Sección donde se debe mostrar los mensajes de error -->
+      <p id="success-message" class="message success-message" style="display: none">
+        Película agregada con éxito
+      </p>
+      <p id="error-message" class="message error-message" style="display: none">
+        Error: La Película seleccionada no se encuentra en la API o se produjo
+        un error al consultar
+      </p>
+    </section>
     <p></p>
   </main>
   <footer>
@@ -76,6 +86,7 @@
   </footer>
   
   <script src="https://cdn.emailjs.com/sdk/2.6.4/email.min.js"></script>
+  <script src="js/common.js"></script>
   <script src="js/pages/help.js"></script>
 </body>
 

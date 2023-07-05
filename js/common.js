@@ -33,7 +33,14 @@ function ocultarCargandoPagina() {
   cargando.style.display = 'none';
 }
 
-
+// Mostrar mensajes
+function mostrarMensaje(idMensaje) {
+  const mensaje = document.getElementById(idMensaje);
+  mensaje.style.display = 'block';
+  setTimeout(() => {
+      mensaje.style.display = 'none';
+  }, 3000);
+}
 
 
 
