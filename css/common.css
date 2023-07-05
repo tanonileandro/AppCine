@@ -169,12 +169,62 @@ footer p {
   font-weight: 200;
   text-align: center;
 }
-.amarillo {
-  background-color: var(--color-theme);
+
+/* Seccion Mensajes */
+#sec-messages {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
-.rojo {
-  background-color: var(--color-titulos);
-}
-.verde {
+.success-message {
+  color: var(--color-texto-blanco);
   background-color: var(--color-verde);
+  width: 100%;
+  border-radius: 15px;
+  padding: 15px 60px;
+}
+
+.warning-message {
+  color: var(--color-texto-blanco);
+  background-color: var(--color-theme);
+  width: 100%;
+  border-radius: 15px;
+  padding: 15px 60px;
+}
+
+.error-message {
+  color: var(--color-texto-blanco);
+  background-color: var(--color-titulos);
+  width: 100%;
+  border-radius: 15px;
+  padding: 15px 60px;
+}
+.message-no-movies {
+  color: var(--color-texto-blanco) !important;
+  background-color: var(--color-theme);
+  width: 100%;
+  max-width: 800px;
+  border-radius: 15px;
+  padding: 15px 60px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-page {
+  display: none;
+  text-align: center;
+  font-weight: 800;
+  margin-top: 20px;
+  margin-bottom: 80px;
+}
+
+.loading-page svg {
+  width: 150px;
+  margin: 20px 20px;
 }

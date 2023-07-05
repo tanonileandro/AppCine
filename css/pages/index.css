@@ -6,13 +6,15 @@
   --color-back-inactive: #c4c6c9;
   --color-titulos: #e83845;
   --color-texto-blanco: #fff;
-  --color-verde: #28a79c;
+  --color-verde: #28a745;
   --color-font: #1d1d1d;
   --color-button: #7f8c8d;
   --color-button-pag: #160038;
-  --color-gradient: linear-gradient(to right,
-      var(--color-theme),
-      var(--color-back-active));
+  --color-gradient: linear-gradient(
+    to right,
+    var(--color-theme),
+    var(--color-back-active)
+  );
 }
 
 body {
@@ -89,7 +91,7 @@ body {
 #sec_peliculas .contenedorPeliculas p {
   font-size: 12px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  color: var(--color-verde);
+  color: var(--color-active);
 }
 
 .contenedorPeliculas .button-fav {

@@ -5,10 +5,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TUP LC2 - TP Integrador</title>
-  <link rel="icon" href="img/cinema_popcorn.ico" type="image/x-icon">
+  <link rel="icon" href="img/cinema_popcorn.ico" type="image/x-icon" />
   <!-- Estilos CSS -->
   <link rel="stylesheet" href="css/common.css" />
-  <link rel="stylesheet" href="css/pages/favorities.css">
+  <link rel="stylesheet" href="css/pages/favorities.css" />
 </head>
 
 <body>
@@ -30,75 +30,45 @@
   <!-- Contenido principal de la página -->
   <main class="contenidoPrincipal">
     <h2>Mis Peliculas Favoritas</h2>
-    <section id="sec-favorities-list">
-      <!--Sección contenido de paliculas favoritas-->
-      <div class="contenedorPeliculasFavoritas" id="contenedorPeliculasFavoritas">
-        <img src="https://www.ecartelera.com/carteles/13500/13593/008_m.jpg" alt="Imagen de película" />
-        <h3>Super Mario Bros: La película</h3>
-        <p>
-          <strong>Código:</strong> 502356 <br><br>
-          <strong>Título original:</strong> Creed III <br>
-          <strong>Idioma original:</strong> en <br>
-          <strong>Resumen:</strong> Dos hermanos plomeros, Mario y Luigi, caen por las alcantarillas y llegan a un mundo
-          subterráneo mágico en el que deben enfrentarse al malvado Bowser para rescatar a la princesa Peach, quien ha
-          sido forzada a aceptar casarse con él.
-        </p>
-        <div class="button-fav">
-          <button class="button radius medium">Quitar de Favoritos</button>
-        </div>
+    <section id="sec-favorities-list" class="sec-favorities-list">
+      <!--Contenido de paliculas favoritas-->
+      <div class="contenedorPeliculasFavoritas" id="contenedorPeliculasFavoritas"></div>
+
+      <!-- Mensajes -->
+      <div id="message-no-movies" class="message-no-movies" style="display: none">
+        No tienes películas seleccionadas en sus favoritos.
       </div>
-      <div class="contenedorPeliculasFavoritas" id="contenedorPeliculasFavoritas">
-        <img src="https://image.tmdb.org/t/p/w500//fcFMd3HdyX7r5gtFwVnn2qr5Yhq.jpg" alt="Imagen de película">
-        <h3>Creed III</h3>
-        <p>
-          <strong>Código:</strong> 677182 <br><br>
-          <strong>Título original:</strong> Creed III <br>
-          <strong>Idioma original:</strong> en <br>
-          <strong>Resumen:</strong> Después de dominar el mundo del boxeo, Adonis Creed ha progresado tanto en su
-          carrera como en su vida familiar. Cuando Damian (Jonathan Majors), un amigo de la infancia y antiguo prodigio
-          del boxeo, reaparece después de cumplir una larga condena en prisión, Adonis Creed quiere demostrar que merece
-          una oportunidad en el ring. El enfrentamiento entre estos antiguos amigos es algo más que una simple pelea.
-          Para ajustar cuentas, Adonis debe arriesgar su futuro para enfrentarse a Damian, un boxeador que no tiene nada
-          que perder.
-        </p>
-        <div class="button-fav">
-          <button class="button radius medium">Quitar de Favoritos</button>
-        </div>
-      </div>
-      <div class="contenedorPeliculasFavoritas" id="contenedorPeliculasFavoritas">
-        <img src="https://pics.filmaffinity.com/rocky_v-872053278-large.jpg" alt="Imagen de película" />
-        <h3>Rocky V</h3>
-        <p>
-          <strong>Código:</strong> 273394 <br /><br />
-          <strong>Título original:</strong> Rocky V <br />
-          <strong>Idioma original:</strong> en <br />
-          <strong>Resumen:</strong> Para sobrevivir, el campeón retirado Rocky Balboa debe entrenar y promocionar a
-          jóvenes promesas del boxeo, además de luchar contra los empresarios que lo adulaban cuando era una máquina de
-          lanzar puños.
-        </p>
-        <div class="button-fav">
-          <button class="button radius medium">Quitar de Favoritos</button>
-        </div>
-      </div>
-      <div class="contenedorPeliculasFavoritas" id="contenedorPeliculasFavoritas">
-        <img src="https://pics.filmaffinity.com/rocky_iv-104851625-large.jpg" alt="Imagen de película" />
-        <h3>Rocky IV</h3>
-        <p>
-          <strong>Código:</strong> 273393 <br /><br />
-          <strong>Título original:</strong> Rocky IV <br />
-          <strong>Idioma original:</strong> en <br />
-          <strong>Resumen:</strong> El campeón Rocky Balboa va a Siberia para enfrentarse a un colosal oponente
-          soviético: el hombre que mató a Apollo Creed.
-        </p>
-        <div class="button-fav">
-          <button class="button radius medium">Quitar de Favoritos</button>
-        </div>
+      <div id="error-message" class="error-message" style="display: none">
+        Ha ocurrido un error al cargar la información. Por favor, intenta
+        nuevamente.
       </div>
     </section>
+    
+    <div id="loading-page" class="loading-page">
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-loader" width="44" height="44"
+          viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round"
+          stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M12 6l0 -3" />
+          <path d="M16.25 7.75l2.15 -2.15" />
+          <path d="M18 12l3 0" />
+          <path d="M16.25 16.25l2.15 2.15" />
+          <path d="M12 18l0 3" />
+          <path d="M7.75 16.25l-2.15 2.15" />
+          <path d="M6 12l-3 0" />
+          <path d="M7.75 7.75l-2.15 -2.15" />
+        </svg>
+      </div>
+      <p>Cargando...</p>
+    </div>
   </main>
   <footer>
     <p>Desarrollado con ♥ - LC2</p>
   </footer>
+
+  <script defer src="js/common.js"></script>
+  <script defer src="js/pages/favorities.js"></script>
 </body>
 
 </html>
