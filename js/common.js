@@ -20,19 +20,19 @@ async function obtenerAPI(page) {
   }
 }
 
-// Función para mostrar el aviso de carga
+// Mostrar el aviso de carga
 function cargandoPagina() {
   const cargando = document.getElementById('loading-page');
   cargando.style.display = 'block';
 }
 
-// Función para ocultar el aviso de carga
+// Ocultar el aviso de carga
 function ocultarCargandoPagina() {
   const cargando = document.getElementById('loading-page');
   cargando.style.display = 'none';
 }
 
-// Mostrar mensajes
+// Mensajes de avisos
 function mostrarMensaje(idMensaje) {
   const mensaje = document.getElementById(idMensaje);
   mensaje.style.display = 'block';

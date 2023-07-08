@@ -12,7 +12,7 @@ form.addEventListener('submit', function(event) {
   const email = document.getElementById('email').value;
   const message = document.getElementById('mensaje').value;
 
-  // Validar que los campos estén rellenados
+  // Validar que los campos estén todos completos
   if (name.trim() === '' || email.trim() === '' || message.trim() === '') {
     mostrarMensaje('warning-message', 'Por favor, completa todos los campos.');
     return; // Detener la ejecución si hay campos vacíos
