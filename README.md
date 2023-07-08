@@ -15,7 +15,7 @@ App Cine - LabComII - Tanoni Leandro
   </a>
 </p>
 
-#### <i><b>Stage 3</b></i> - ~/06/2023
+#### <i><b>Stage 3</b></i> - 09/07/2023
 <p align="left">
   <a href="https://skillicons.dev">
     <img src="https://skillicons.dev/icons?i=html,css,js&perline=14" />
