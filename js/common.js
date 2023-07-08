@@ -4,14 +4,13 @@ const LANGUAGE = 'es-ES';
 async function obtenerAPI(page) {
   try {
     const url = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=${LANGUAGE}&page=${page}`;
-
     const response = await fetch(url);
+
     if (!response.ok) {
       throw new Error('Error al obtener los datos de la API');
     }
 
     const data = await response.json();
-
     totalPages = data.total_pages; // Actualizar el número total de páginas disponibles
 
     return data.results;

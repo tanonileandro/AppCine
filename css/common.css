@@ -41,6 +41,7 @@ a {
   background-repeat: no-repeat;
   border-radius: 0 0% 20px 20px;
   border-bottom: 2px solid var(--color-active);
+  z-index: 9999; /* Asigna un valor alto al z-index */
 }
 #nav-bar > ul {
   display: flex;
