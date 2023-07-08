@@ -44,7 +44,6 @@ async function crearCartelera(pagina) {
 }
 
 
-
 // Agregar películas a favoritos por código
 async function agregarPeliculaPorCodigo(codigo) {
     const favoritos = JSON.parse(localStorage.getItem('FAVORITOS')) || [];

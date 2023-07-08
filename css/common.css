@@ -180,6 +180,7 @@ footer p {
   align-items: center;
   justify-content: center;
   text-align: center;
+  margin-top: 10px;
 }
 .success-message {
   color: var(--color-texto-blanco);

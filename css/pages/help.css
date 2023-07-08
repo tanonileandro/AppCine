@@ -6,7 +6,7 @@
     --color-back-inactive: #c4c6c9;
     --color-titulos: #e83845;
     --color-texto-blanco: #fff;
-    --color-verde: #28a79c;
+    --color-verde: #28a745;
     --color-font: #1d1d1d;
     --color-button: #7f8c8d;
     --color-gradient: linear-gradient(to right,
@@ -79,7 +79,7 @@
     text-align: center;
     height: 40px;
     width: 70px;
-    background-color: var(--color-verde);
+    background-color: var(--color-active);
     color: var(--color-texto-blanco);
     border-radius: 10px;
     font-weight: bold;
