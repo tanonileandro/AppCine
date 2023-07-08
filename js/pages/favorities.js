@@ -65,8 +65,8 @@ function mostrarPeliculasFav() {
                 errorMessage.style.display = 'block';
             });
 
-            messageNoMovies.style.display = 'none';
-            errorMessage.style.display = 'none';
+        messageNoMovies.style.display = 'none';
+        errorMessage.style.display = 'none';
     }
 }
 

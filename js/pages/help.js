@@ -1,10 +1,10 @@
-(function() {
+(function () {
   emailjs.init('xOMj-4vy1S6yjqLsV');
 })();
 
 const form = document.querySelector('.form');
 
-form.addEventListener('submit', function(event) {
+form.addEventListener('submit', function (event) {
   event.preventDefault();
 
   // Obtener los valores del formulario
@@ -23,10 +23,10 @@ form.addEventListener('submit', function(event) {
     from_name: name,
     from_email: email,
     message: message
-  }).then(function(response) {
+  }).then(function (response) {
     mostrarMensaje('success-message', 'El mensaje ha sido enviado correctamente.');
     form.reset(); // Limpiar el formulario después de enviar el mensaje
-  }).catch(function(error) {
+  }).catch(function (error) {
     mostrarMensaje('error-message', 'Ha ocurrido un error al enviar el mensaje. Por favor, intenta nuevamente.');
   });
 });

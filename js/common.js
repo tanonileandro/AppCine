@@ -37,7 +37,7 @@ function mostrarMensaje(idMensaje) {
   const mensaje = document.getElementById(idMensaje);
   mensaje.style.display = 'block';
   setTimeout(() => {
-      mensaje.style.display = 'none';
+    mensaje.style.display = 'none';
   }, 3000);
 }
 

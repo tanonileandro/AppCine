@@ -65,6 +65,7 @@ async function agregarPeliculaPorCodigo(codigo) {
         favoritos.push(peliculaExistente);
         localStorage.setItem('FAVORITOS', JSON.stringify(favoritos));
         mostrarMensaje('success-message');
+
     } catch (error) {
         console.error('Error:', error);
     }
@@ -77,6 +78,9 @@ function agregarPeliculaDesdeBoton(event) {
         const codigo = parseInt(tarjeta.querySelector('.codigo').textContent);
         agregarPeliculaPorCodigo(codigo);
     }
+
+    // Realizar desplazamiento hacia arriba
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 //  Evento submit-formulario para agregar películas por código
@@ -93,7 +97,11 @@ formFavoritos.addEventListener('submit', async event => {
 const btnSiguiente = document.getElementById('btnSiguiente');
 btnSiguiente.addEventListener('click', () => {
     paginaActual++;
+
     crearCartelera(paginaActual);
+
+    // Realizar desplazamiento hacia arriba
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
 // Evento de clic al botón "Anterior"
@@ -103,6 +111,9 @@ btnAnterior.addEventListener('click', () => {
         paginaActual--;
         crearCartelera(paginaActual);
     }
+
+    // Realizar desplazamiento hacia arriba
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
 // Obtener cartelera peliculas
@@ -113,4 +124,3 @@ carteleraPeliculas.addEventListener('click', agregarPeliculaDesdeBoton);
 
 // Inicializar la creación de la cartelera en la página 1
 crearCartelera(paginaActual);
-
