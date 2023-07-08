@@ -1,6 +1,6 @@
 // Configuración de EmailJS
 (function () {
-  emailjs.init('LYZl281jsaB6EaTu9w4Va'); // Reemplaza 'YOUR_USER_ID' por tu ID de usuario de EmailJS
+  emailjs.init('xOMj-4vy1S6yjqLsV');
 })();
 
 // Capturar el evento de envío del formulario
